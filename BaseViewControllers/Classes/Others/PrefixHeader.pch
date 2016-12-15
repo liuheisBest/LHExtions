@@ -1,0 +1,125 @@
+//
+//  PrefixHeader.pch
+//  BaseViewControllerWithTableViewControllerWithCollectionVC
+//
+//  Created by 刘贺 on 16/12/15.
+//  Copyright © 2016年 com.poba. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "MJRefresh.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "NetWork.h"
+#import "MBProgressHUD.h"
+#import "SXLoadingView.h"
+#import "MDYAFHelp.h"
+//#import "GVUserDefaults+BBProperties.h"
+#define IPhone4_5_6_6P(a,b,c,d) (CGSizeEqualToSize(CGSizeMake(320, 480), [[UIScreen mainScreen] bounds].size) ?(a) :(CGSizeEqualToSize(CGSizeMake(320, 568), [[UIScreen mainScreen] bounds].size) ? (b) : (CGSizeEqualToSize(CGSizeMake(375, 667), [[UIScreen mainScreen] bounds].size) ?(c) : (CGSizeEqualToSize(CGSizeMake(414, 736), [[UIScreen mainScreen] bounds].size) ?(d) : 0))))
+#define The_path_Resource(name) [[NSBundle mainBundle] pathForResource:name ofType:@"png"]
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define kIPhoneSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kButtonHeight 80/568.0 *kScreenHeight
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
+//像素对应的字体大小
+#define FONTFromePX(PX) [UIFont systemFontOfSize:(PX * 0.5)]
+
+#define kV3_20PX_FONT [UIFont systemFontOfSize:10]
+#define kV3_22PX_FONT [UIFont systemFontOfSize:11]
+#define kV3_24PX_FONT [UIFont systemFontOfSize:12]
+#define kV3_26PX_FONT [UIFont systemFontOfSize:13]
+#define kV3_28PX_FONT [UIFont systemFontOfSize:14]
+#define kV3_30PX_FONT [UIFont systemFontOfSize:15]
+#define kV3_32PX_FONT [UIFont systemFontOfSize:16]
+#define kV3_34PX_FONT [UIFont systemFontOfSize:17]
+#define kV3_36PX_FONT [UIFont systemFontOfSize:18]
+/*
+ 1  + systemFontOfSize
+ 2  + boldSystemFontOfSize
+ 3  + italicSystemFontOfSize
+ 
+ 1 中是系统的默认方法
+ 2 是字体  bold ：醒目的；雄浑的；突出的，使用后会加粗字体
+ 3 字体为斜体 italic [i'tælik] n. 斜体，斜体字*/
+#define kUISysFont(f) [UIFont systemFontOfSize:f]
+#define kUIBoldFont(f) [UIFont boldSystemFontOfSize:f]
+#define kUIItalicFont(f) [UIFont italicSystemFontOfSize:f]
+
+//#define kServerHost @"http://hdkj-web1.chinacloudapp.cn:8080/v1/"
+
+//kCOLOR
+#define kRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
+#define MainColor [UIColor colorWithHex:0x00b8ee];
+#define GrayColor [UIColor colorWithHex:0xf0f0f0];
+#define COLOR_UNDER_LINE [UIColor colorWithRed:198/255.0 green:198/255.0 blue:198/255.0 alpha:1]
+#define kCOLOR_TEXT_A          [UIColor whiteColor]
+//placeholder
+#define kCOLOR_TEXT_P          [UIColor colorWithRed:200/255.0f green:200/255.0f blue:200/255.0f alpha:1.0f]
+#define kCOLOR_TEXT_C          [UIColor colorWithRed:150.0f/255.0f green:150.0f/255.0f blue:150.0f/255.0f alpha:1.0f]
+#define kCOLOR_TEXT_D          [UIColor colorWithHex:0x333333]
+
+//字体色彩
+#define COLOR_WORD_BLACK kColorHex(0x333333)
+#define COLOR_WORD_GRAY_1 kColorHex(0x666666)
+#define COLOR_WORD_GRAY_2 kColorHex(0x999999)
+#define kColorHex(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]
+
+#define kColor_White [UIColor whiteColor];
+#define kColor_Green [UIColor greenColor];
+#define kColor_Black [UIColor blackColor] ;
+#define RGBA(r, g, b, a)   [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
+#define RGB(r, g, b) RGBA(r, g, b, 1.f)
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 \
+alpha:1.0]
+
+//documentPath
+#define kDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+
+#define kUserPath [DocumentPath stringByAppendingPathComponent:@"PBSoft/PBUser"]
+
+//  当前设备ios系统版本
+#define APPSystemVersion  [[[UIDevice currentDevice] systemVersion] floatValue]
+
+//  app version
+#define APPVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+//  弱引用宏
+#define  WeakSelf(object)   __weak typeof(object) weakSelf = object;
+//  UUID获取
+#define UUID1 [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+// iPhone/iPad
+#define DeviceModel [[UIDevice currentDevice] model]
+#define AutoLogin @"autoLogin"
+//  存储token的名字
+#define kToken   [[NSUserDefaults standardUserDefaults]objectForKey:@"token"]
+#define kUserId   [[NSUserDefaults standardUserDefaults]objectForKey:@"userid"]
+#define kUserModel   [NSKeyedUnarchiver unarchiveObjectWithData:[kUserDefaults valueForKey:__UserModelKey]]
+#define __UserModelKey @"userModel"
+#define RONGCLOUD_IM_APPKEY @"sfci50a7ccfci"
+//Keyy745wfm84474v
+#define My_DIYAlert_error(m) [self presentViewController:[[DIYAlertController alloc] initWithName:@"提示" message:m titleArray:@[@"取消",@"确定"] preferredStyle:@"1"] animated:YES completion:nil]
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
+#define ShareApplicationDelegate [[UIApplication sharedApplication] delegate]
+#endif /* PrefixHeader_pch */
