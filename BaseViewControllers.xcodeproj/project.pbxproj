@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1884BD701E02953400F66346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884BD6F1E02953400F66346 /* main.m */; };
-		1884BD731E02953400F66346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884BD721E02953400F66346 /* AppDelegate.m */; };
 		1884BD7C1E02953400F66346 /* BaseViewControllers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1884BD7A1E02953400F66346 /* BaseViewControllers.xcdatamodeld */; };
 		1884BD7E1E02953400F66346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1884BD7D1E02953400F66346 /* Assets.xcassets */; };
 		1884BD811E02953400F66346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1884BD7F1E02953400F66346 /* LaunchScreen.storyboard */; };
@@ -66,6 +65,7 @@
 		1884BE5C1E029A3E00F66346 /* PBCollectionViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884BE1E1E029A3E00F66346 /* PBCollectionViewControllerTwo.m */; };
 		1884BE5D1E029A3E00F66346 /* MDYAFHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884BE241E029A3E00F66346 /* MDYAFHelp.m */; };
 		1884BE5E1E029A3E00F66346 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884BE261E029A3E00F66346 /* NetWork.m */; };
+		1887A4B21E02A07B001A2681 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887A4B11E02A07B001A2681 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +88,6 @@
 /* Begin PBXFileReference section */
 		1884BD6B1E02953400F66346 /* BaseViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1884BD6F1E02953400F66346 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1884BD711E02953400F66346 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
-		1884BD721E02953400F66346 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
 		1884BD7B1E02953400F66346 /* BaseViewControllers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseViewControllers.xcdatamodel; sourceTree = "<group>"; };
 		1884BD7D1E02953400F66346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1884BD801E02953400F66346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -204,6 +202,8 @@
 		1884BE251E029A3E00F66346 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		1884BE261E029A3E00F66346 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		1884BE281E029A3E00F66346 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1887A4B01E02A07B001A2681 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1887A4B11E02A07B001A2681 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,8 +310,8 @@
 		1884BDA51E029A3E00F66346 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				1884BD711E02953400F66346 /* AppDelegate.h */,
-				1884BD721E02953400F66346 /* AppDelegate.m */,
+				1887A4B01E02A07B001A2681 /* AppDelegate.h */,
+				1887A4B11E02A07B001A2681 /* AppDelegate.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -778,7 +778,6 @@
 				1884BE371E029A3E00F66346 /* AFAutoPurgingImageCache.m in Sources */,
 				1884BE4B1E029A3E00F66346 /* MJRefreshBackGifFooter.m in Sources */,
 				1884BE5E1E029A3E00F66346 /* NetWork.m in Sources */,
-				1884BD731E02953400F66346 /* AppDelegate.m in Sources */,
 				1884BE301E029A3E00F66346 /* AFNetworkReachabilityManager.m in Sources */,
 				1884BE501E029A3E00F66346 /* MJRefreshStateHeader.m in Sources */,
 				1884BE2C1E029A3E00F66346 /* BaseViewController.m in Sources */,
@@ -796,6 +795,7 @@
 				1884BE5C1E029A3E00F66346 /* PBCollectionViewControllerTwo.m in Sources */,
 				1884BE5B1E029A3E00F66346 /* PBCollectionViewControllerThree.m in Sources */,
 				1884BE391E029A3E00F66346 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				1887A4B21E02A07B001A2681 /* AppDelegate.m in Sources */,
 				1884BE491E029A3E00F66346 /* MJRefreshAutoNormalFooter.m in Sources */,
 				1884BE5D1E029A3E00F66346 /* MDYAFHelp.m in Sources */,
 				1884BE4C1E029A3E00F66346 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1044,6 +1044,7 @@
 				1884BD9D1E02953400F66346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1884BD9E1E02953400F66346 /* Build configuration list for PBXNativeTarget "BaseViewControllersTests" */ = {
 			isa = XCConfigurationList;
@@ -1052,6 +1053,7 @@
 				1884BDA01E02953400F66346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1884BDA11E02953400F66346 /* Build configuration list for PBXNativeTarget "BaseViewControllersUITests" */ = {
 			isa = XCConfigurationList;
@@ -1060,6 +1062,7 @@
 				1884BDA31E02953400F66346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
